@@ -1,0 +1,26 @@
+version: "3.6"
+
+services:
+  db:
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql-root-password
+      MYSQL_PASSWORD_FILE: /run/secrets/wordpress-db-password
+    secrets:
+      - mysql-root-password
+      - wordpress-db-password
+
+  wordpress:
+    environment:
+      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/wordpress-db-password
+      VIRTUAL_HOST: everwanderer.com, www.everwanderer.com
+      VIRTUAL_PORT: 80
+      LETSENCRYPT_HOST: everwanderer.com, www.everwanderer.com
+      LETSENCRYPT_EMAIL: davidrv87@gmail.com
+    secrets:
+      - wordpress-db-password
+
+secrets:
+  mysql-root-passwrod:
+    external: true
+  wordpress-db-password:
+    external: true
