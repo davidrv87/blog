@@ -10,7 +10,7 @@ Wordpress blog with MySQL database behind a Nginx proxy with SSL certificates by
 
 Clone this repo and run the following commands:
 
-* Read this [guide][1] to setup your machine, like `/etc/hosts/`, certificates.
+* Read the this [guide](https://medium.com/@francoisromain/set-a-local-web-development-environment-with-custom-urls-and-https-3fbe91d2eaf0) to setup your machine, like `/etc/hosts/`, certificates.
 * To start Nginx proxy, from the root of the project, run this command:
 
 ```bash
@@ -31,11 +31,8 @@ docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d
 ```
 
 ## For production
-TBD
+Refer to this [guide](https://medium.com/@francoisromain/host-multiple-websites-with-https-inside-docker-containers-on-a-single-server-18467484ab95).
 
 ## Acknowledgments
 
 Thanks to [François Romain](https://medium.com/@francoisromain) for the excellent guides.
-
-[1]: [https://medium.com/@francoisromain/set-a-local-web-development-environment-with-custom-urls-and-https-3fbe91d2eaf0]
-[2]: [https://medium.com/@francoisromain/host-multiple-websites-with-https-inside-docker-containers-on-a-single-server-18467484ab95]
